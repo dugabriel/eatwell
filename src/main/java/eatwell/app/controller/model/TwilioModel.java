@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TwillioModel {
+public class TwilioModel {
     private String MediaContentType0;
     private String SmsMessageSid;
     private String MessageSid;
