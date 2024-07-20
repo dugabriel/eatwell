@@ -58,7 +58,6 @@ public class FoodVisorClient {
                 return null;
             }
         }
-
         return null;
     }
 

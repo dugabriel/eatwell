@@ -15,9 +15,12 @@ public class WhatsAppService {
 
     private final FoodVisorClient foodVisorClient;
 
-    public WhatsAppService(TwilioClient twilioClient, FoodVisorClient foodVisorClient) {
+    private final TemplateService templateService;
+
+    public WhatsAppService(TwilioClient twilioClient, FoodVisorClient foodVisorClient, TemplateService templateService) {
         this.twilioClient = twilioClient;
         this.foodVisorClient = foodVisorClient;
+        this.templateService = templateService;
     }
 
     public void process(TwilioModel twilioModel) {
@@ -25,8 +28,9 @@ public class WhatsAppService {
 
         log.info("media url -> {}", twilioModel.getMediaUrl0());
 
-        foodVisorClient.getAnalysisImage(twilioModel.getMediaUrl0());
+        var foodAnalysisResult = foodVisorClient.getAnalysisImage(twilioModel.getMediaUrl0());
 
+        twilioClient.sendWhatsAppMessage(templateService.foodTemplateAnalysis(foodAnalysisResult), twilioModel.getFrom());
     }
 
 }
