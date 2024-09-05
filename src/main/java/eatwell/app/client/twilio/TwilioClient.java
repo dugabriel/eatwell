@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TwilioClient {
 
-    private static final String ACCOUNT_SID = "ACdc12f25ba4102ad9ff276d209915bcd8";
-    private static final String AUTH_TOKEN = "b80df41e307eebd02b260290d66b44c2";
+    private static final String ACCOUNT_SID = "xx";
+    private static final String AUTH_TOKEN = "xx";
     private static final String FROM = "whatsapp:+14155238886";
 
     private final OkHttpClient okHttpClient;

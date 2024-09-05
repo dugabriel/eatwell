@@ -24,7 +24,7 @@ import java.net.URISyntaxException;
 @Slf4j
 public class FoodVisorClient {
 
-    private static final String TOKEN_FOOD_VISOR = "Api-Key Sp89l5rL.0qI3nWZu1YYJgByl8kH9fW6zgKnSj8u2";
+    private static final String TOKEN_FOOD_VISOR = "Api-Key xx";
 
     private final OkHttpClient okHttpClient;
 
